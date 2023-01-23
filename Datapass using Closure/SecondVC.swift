@@ -8,22 +8,17 @@
 import UIKit
 
 class SecondVC: UIViewController {
-    @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblAddress: UILabel!
-    var name: String?
-    var address: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-       featchData()
+
         
     }
     
-    func featchData() {
-        lblName.text = name
-        lblAddress.text = address
-    }
-    @IBAction func onClickBackBtn(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    @IBAction func btnFB(_ sender: Any) {
+        NotificationCenter.default.post(name: .facebook, object: ["name": 123])
     }
     
+    @IBAction func btnTwiter(_ sender: Any) {
+        NotificationCenter.default.post(name: .twitter, object: ["name": 767])
+    }
 }
