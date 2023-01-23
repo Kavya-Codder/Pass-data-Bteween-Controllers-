@@ -7,24 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController, DataPass {
+class ViewController: UIViewController {
     
-    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var txtName: UITextField!
     
-    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var txtAddress: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     
     }
 
-    @IBAction func onClickAddBtn(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        vc.featchDataDelegate = self
-        navigationController?.pushViewController(vc, animated: true)
+    @IBAction func onClickSubmitBtn(_ sender: Any) {
+        let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        secondVC.name = txtName.text
+        secondVC.address = txtAddress.text
+        navigationController?.pushViewController(secondVC, animated: true)
+        
     }
-    func featchData(name: String, address: String) {
-        lblName.text = "Name: \(name)"
-        lblAddress.text = "Address: \(address)"
-    }
-  }
+    
+}
 

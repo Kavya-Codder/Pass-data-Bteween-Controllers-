@@ -2,27 +2,28 @@
 //  SecondVC.swift
 //  Datapass using Closure
 //
-//  Created by Sunil Developer on 22/01/23.
+//  Created by Sunil Developer on 23/01/23.
 //
 
 import UIKit
-protocol DataPass {
-    func featchData(name: String, address: String)
-}
+
 class SecondVC: UIViewController {
-   
-    @IBOutlet weak var txtAddress: UITextField!
-    @IBOutlet weak var txtName: UITextField!
-    var featchDataDelegate: DataPass!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
+    var name: String?
+    var address: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+       featchData()
+        
     }
     
-    @IBAction func onClickSubmitBtn(_ sender: Any) {
-        self.featchDataDelegate?.featchData(name: txtName.text ?? "", address: txtAddress.text ?? "")
-        navigationController?.popViewController(animated: false)
+    func featchData() {
+        lblName.text = name
+        lblAddress.text = address
+    }
+    @IBAction func onClickBackBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
-
 }
