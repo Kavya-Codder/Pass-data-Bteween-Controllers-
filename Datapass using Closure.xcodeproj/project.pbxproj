@@ -16,6 +16,7 @@
 		0720D4C2297DAF4500F6B6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0720D4C0297DAF4500F6B6DB /* LaunchScreen.storyboard */; };
 		0720D4CD297DAF4500F6B6DB /* Datapass_using_ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0720D4CC297DAF4500F6B6DB /* Datapass_using_ClosureTests.swift */; };
 		0720D4D8297DAF4500F6B6DB /* Datapass_using_ClosureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0720D4D7297DAF4500F6B6DB /* Datapass_using_ClosureUITests.swift */; };
+		0720D4E9297DB01500F6B6DB /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0720D4E8297DB01500F6B6DB /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0720D4D3297DAF4500F6B6DB /* Datapass using ClosureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Datapass using ClosureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0720D4D7297DAF4500F6B6DB /* Datapass_using_ClosureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datapass_using_ClosureUITests.swift; sourceTree = "<group>"; };
 		0720D4D9297DAF4600F6B6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0720D4E8297DB01500F6B6DB /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				0720D4C0297DAF4500F6B6DB /* LaunchScreen.storyboard */,
 				0720D4C3297DAF4500F6B6DB /* Info.plist */,
 				0720D4BB297DAF4300F6B6DB /* Datapass_using_Closure.xcdatamodeld */,
+				0720D4E8297DB01500F6B6DB /* SecondVC.swift */,
 			);
 			path = "Datapass using Closure";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0720D4B7297DAF4300F6B6DB /* ViewController.swift in Sources */,
+				0720D4E9297DB01500F6B6DB /* SecondVC.swift in Sources */,
 				0720D4BD297DAF4300F6B6DB /* Datapass_using_Closure.xcdatamodeld in Sources */,
 				0720D4B3297DAF4300F6B6DB /* AppDelegate.swift in Sources */,
 				0720D4B5297DAF4300F6B6DB /* SceneDelegate.swift in Sources */,
