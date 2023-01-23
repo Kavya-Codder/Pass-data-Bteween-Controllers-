@@ -6,25 +6,22 @@
 //
 
 import UIKit
-
+protocol DataPass {
+    func featchData(name: String, address: String)
+}
 class SecondVC: UIViewController {
-    
-
+   
     @IBOutlet weak var txtAddress: UITextField!
     @IBOutlet weak var txtName: UITextField!
-    var callBack: ((_ name: String, _ address: String) -> Void)?
-    
-    typealias myDouble = Double
-    
+    var featchDataDelegate: DataPass!
     override func viewDidLoad() {
         super.viewDidLoad()
-  let abc = myDouble(123)
-        // Do any additional setup after loading the view.
+  
     }
     
     @IBAction func onClickSubmitBtn(_ sender: Any) {
-        callBack?(txtName.text ?? "", txtAddress.text ?? "")
-        navigationController?.popViewController(animated: true)
+        self.featchDataDelegate?.featchData(name: txtName.text ?? "", address: txtAddress.text ?? "")
+        navigationController?.popViewController(animated: false)
     }
     
 

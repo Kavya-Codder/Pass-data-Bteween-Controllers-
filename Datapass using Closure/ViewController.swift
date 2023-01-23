@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, DataPass {
+    
     @IBOutlet weak var lblName: UILabel!
     
     @IBOutlet weak var lblAddress: UILabel!
@@ -19,14 +19,12 @@ class ViewController: UIViewController {
 
     @IBAction func onClickAddBtn(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        vc.callBack = {
-            (name, address) in
-            self.lblName.text = name
-            self.lblAddress.text = address
-        }
+        vc.featchDataDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
-}
+    func featchData(name: String, address: String) {
+        lblName.text = "Name: \(name)"
+        lblAddress.text = "Address: \(address)"
+    }
+  }
 
