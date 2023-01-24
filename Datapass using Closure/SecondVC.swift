@@ -8,21 +8,18 @@
 import UIKit
 
 class SecondVC: UIViewController {
-    let imgFb = UIImage(named: "imgFB")
-    let imgTwitter = #imageLiteral(resourceName: "imgTwitter")
+    
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    
+    var name: String = ""
+    var address: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        lblName.text = "Name: \(name)"
+        lblAddress.text = "Address: \(address)"
     }
     
-    @IBAction func btnFB(_ sender: Any) {
-       // NotificationCenter.default.post(name: .facebook, object: ["name": 123])
-        NotificationCenter.default.post(name: .facebook, object: nil, userInfo: ["name": "Facebook", "image": imgFb ?? UIImage()])
-    }
-    
-    @IBAction func btnTwiter(_ sender: Any) {
-        //NotificationCenter.default.post(name: .twitter, object: ["name": 767])
-        NotificationCenter.default.post(name: .twitter, object: nil, userInfo: ["name": "Twitter", "image": imgTwitter ])
-    }
+   
 }
